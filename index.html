@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="alertmsg">ALERT</div>
+        <form id="form">
+            <h3>TO DO LIST</h3>
+            <input type="text" placeholder="Enter Item">
+            <button>add item</button>
+        </form>
+    </div>
+  <div class="cover">
+    <div class="tab">
+      <button class="tablinks" onclick="opendiscription(event, 'all')">ALL TASKS</button>
+      <button class="tablinks" onclick="opendiscription(event, 'todo')">LEFT TASKS</button>
+      <button class="tablinks" onclick="opendiscription(event, 'completed')">COMPLETED</button>
+    </div>
+    
+    <div id="all" class="tabcontent">
+        <ul class="lists" id ="itemslist">
+        </ul>
+    </div>
+    
+    <div id="todo" class="tabcontent">
+      <h3>random</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, vero? Numquam possimus hic, iste cumque animi labore fuga doloremque eius officia nobis aspernatur odio libero quasi voluptatum nisi illum corporis in nemo asperiores corrupti veritatis, facere maxime! Sed, vel modi?</p> 
+    </div>
+    
+    <div id="completed" class="tabcontent">
+      <h3>random</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni harum accusantium molestias recusandae laboriosam numquam maiores ratione sed impedit, molestiae amet iste, natus quisquam neque velit illum. Totam facilis mollitia rerum, odit accusantium adipisci est perferendis, dolore dolores eveniet illum!</p>
+    </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
