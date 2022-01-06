@@ -144,3 +144,20 @@ main{
 .task .actions .delete{
   color:crimson;
 }
+
+.box{
+  border: 2px solid green;
+  height: 2rem;
+  width:2rem;
+  visibility: none;
+}
+.actions img{
+  display: none;
+}
+.tick img{
+  border: 2px solid green;
+  height: 2rem;
+  width:2rem;
+  margin: auto;
+  display: block;
+}

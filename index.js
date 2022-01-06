@@ -30,6 +30,13 @@ window.addEventListener("load", () => {
         const task_actions_el = document.createElement("div");
         task_actions_el.classList.add("actions");
 
+
+        const task_check_el = document.createElement("div");
+        task_check_el.classList.add("box");
+        const task_check_img_el = document.createElement("img");
+        task_check_img_el.src ="Screenshot__22_-removebg-preview.png";
+
+
         const task_edit_el = document.createElement("button");
         task_edit_el.classList.add("edit");
         task_edit_el.innerHTML = "Edit";
@@ -38,6 +45,9 @@ window.addEventListener("load", () => {
         task_delete_el.classList.add("delete");
         task_delete_el.innerHTML = "Delete";
 
+        task_check_el.appendChild(task_check_img_el);
+        task_actions_el.appendChild(task_check_el);
+
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
         task_el.appendChild(task_actions_el);
@@ -45,7 +55,10 @@ window.addEventListener("load", () => {
         input.value="";
 
 
-
+        task_check_el.addEventListener("click",() => {
+            task_check_el.classList.remove("box");
+            task_check_el.classList.add("tick");
+        })
 
         task_edit_el.addEventListener("click",() => {
           if(task_edit_el.innerText.toLowerCase() =="edit"){
@@ -62,7 +75,7 @@ window.addEventListener("load", () => {
 
         task_delete_el.addEventListener("click", () =>{
             list_el.removeChild(task_el);
-        })
+        });
 
-    })
-})
+    });
+});
