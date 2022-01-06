@@ -11,14 +11,20 @@
     <title>TO DO LIST</title>
 </head>
 <body>
+
+
+
     <div class="outerbox">
-        <div class="alertmsg">ALERT</div>
+        <div class="alertmsg"></div>
         <form id="form">
             <h3>TO DO LIST</h3>
-            <input type="text" placeholder="Enter Item">
-            <button>add item</button>
+            <input autocomplete="off" type="text" id="user" placeholder="Enter Item">
+            <button id="additon">add item</button>
         </form>
     </div>
+
+
+
   <div class="cover">
     <div class="tab">
       <button class="tablinks" onclick="opendiscription(event, 'all')">ALL TASKS</button>
@@ -27,8 +33,9 @@
     </div>
     
     <div id="all" class="tabcontent">
-        <ul class="lists" id ="itemslist">
-        </ul>
+        <div>
+
+        </div>
     </div>
     
     <div id="todo" class="tabcontent">
@@ -41,16 +48,6 @@
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni harum accusantium molestias recusandae laboriosam numquam maiores ratione sed impedit, molestiae amet iste, natus quisquam neque velit illum. Totam facilis mollitia rerum, odit accusantium adipisci est perferendis, dolore dolores eveniet illum!</p>
     </div>
 </div> 
-
-
-
-
-
-
-
-
-
-
     <script src="index.js"></script>
 </body>
 </html>

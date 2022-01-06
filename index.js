@@ -1,6 +1,5 @@
 
 // tab-section
-
 function opendiscription(evt, _tasks) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -23,36 +22,39 @@ const itemslist = document.querySelector("#itemslist");
 const filters = document.querySelectorAll(".tablinks");
 
 
-let todoitems = [];
+var todoitemss = [];
 const handleitem = function (itemData) {
     const items = document.querySelectorAll(".group_item");
     items.forEach((item) => {
-        if (item.querySelector(".title").getAttribute("data-time") == itemData.addedAt) {
+        // if (item.querySelector(".title").getAttribute("data-time") == itemData.addedAt) {
             // checking button
             item.querySelector("[data-done]").addEventListener("click", function (e) {
                 e.preventDefault();
-                const itemIndex = todoitems.indexOf(itemData);
-                const currentItem = todoitems[itemIndex];
+                const itemIndex = todoitemss.indexOf(itemData);
+                const currentItem = todoitemss[itemIndex];
+                const currentclass =  currentItem.isdone ? "filled":"updations";
                 currentItem.isdone = "true";
-                todoitems.splice(itemIndex, 1, currentItem);
+                todoitemss.splice(itemIndex, 1, currentItem);
                 setLocalStorage(todoitems);
+                const iconClass = currentItem.isdone ? "filled":"updations";
+                this.firstElementChild.classList.replace(currentclass,iconClass);
             });
 
-        }
+            
     });
 };
 
 
 const getList = function (todoItems) {
     itemslist.innerHTML = "";
-    if (todoitems.length > 0) {
-        todoitems.forEach((item) => {
-            const iconClass = item.isdone ? "updations":"filled";
+    if (todoitemss.length > 0) {
+        todoitemss.forEach((item) => {
+            const iconClass = item.isdone ? "filled":"updations";
             itemslist.insertAdjacentHTML("beforeend",
                 `<li class="group_item">
             <span class="title" data-time="${item.addedAt}">${item.name}</span>
             <span>
-                <a href="#" class="updations ${iconClass}"data-done><img src="/Screenshot__22_-removebg-preview.png" alt=""></a>
+                <a href="#" class=" ${iconClass}"data-done><img src="/Screenshot__22_-removebg-preview.png" alt=""></a>
                 <a href="#"class="updations"data-edit>edit</a>
                 <a href="#"class="updations" data-delete>delete</a>
             </span>
@@ -69,13 +71,13 @@ const setLocalStorage = function (todoitems) {
 const getlocalstorage = function () {
     const todostorage = localStorage.getItem("todoitems");
     if (todostorage == "undefined" || todostorage == "null") {
-        todoitems = [];
+        todoitemss = [];
     }
     else {
-        todoitems = JSON.parse(todostorage);
+        todoitemss = JSON.parse(todostorage);
     }
-    console.log("items", todoitems);
-    getList(todoitems);
+    console.log("items", todoitemss);
+    getList(todoitemss);
 }
 
 
@@ -96,7 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 addedAt: new Date().getTime()
             };
             todoitems.push(itemobj);
-            setLocalStorage(todoitems);
+            console.log("hyy");
+            setLocalStorage(todoitemss);
         }
     });
     getlocalstorage();

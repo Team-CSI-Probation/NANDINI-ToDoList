@@ -7,7 +7,7 @@
     font-family: 'Francois One', sans-serif;
 }
 body{
-  background:url("/background image.jpg");
+  background:url("/background image.jpg")no-repeat;
   width:100%;
   background-color: black;
   height: 100%; 
@@ -31,7 +31,12 @@ body{
     background-color: rgb(57, 189, 31);
     border-radius: 5px;
 }
-
+.alertmsg{
+  color:white;
+}
+#form h3{
+  color:white;
+}
 /* tab-section */
  
  .tab {
@@ -74,6 +79,9 @@ body{
     background-color: black;
     box-shadow: 3px 3px 4px 1px white;
   }
+  .group_item{
+    border-bottom:0.7px solid #ddd;
+  }
 
 /* inside-tab-section */
 .group_item{
@@ -81,15 +89,22 @@ body{
   justify-content: space-between;
 }
 
-
+#all{
+  height: 300px;
+  overflow-y:scroll;
+  scroll-margin: 2px;
+}
 .updations{
   color: rgb(57, 189, 31);
 }
 .updations img{
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
 }
-.filled{
-  border-radius:15px;
-  color:rgb(57, 189, 31);
+.filled img{
+  height: 40px;
+  width: 40px;
+  border-radius:100px;
+  height: 45px;
+  background-color:rgb(34, 104, 22);
 }
