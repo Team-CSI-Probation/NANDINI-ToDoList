@@ -12,42 +12,42 @@
 </head>
 <body>
 
+  <header>
+    <h1>TASK LISTS</h1>
+    <form action="" id="new-task-form">
+      <input type="text" id="new-task-input" placeholder="What do you have planned?">
+      <input type="submit" id="new-task-submit" value="Add task">
+    </form>
+  </header>
 
+  
+  <main>
+    <section class="task-list">
+      <h2>Tasks</h2>
 
-    <div class="outerbox">
-        <div class="alertmsg"></div>
-        <form id="form">
-            <h3>TO DO LIST</h3>
-            <input autocomplete="off" type="text" id="user" placeholder="Enter Item">
-            <button id="additon">add item</button>
-        </form>
-    </div>
+      <div id="tasks">
 
+        <div class="task">
 
+          <div class="content">
+            <input type="text" class="text" value="My Shiny task"readonly>
+          </div>
 
-  <div class="cover">
-    <div class="tab">
-      <button class="tablinks" onclick="opendiscription(event, 'all')">ALL TASKS</button>
-      <button class="tablinks" onclick="opendiscription(event, 'todo')">LEFT TASKS</button>
-      <button class="tablinks" onclick="opendiscription(event, 'completed')">COMPLETED</button>
-    </div>
-    
-    <div id="all" class="tabcontent">
-        <div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">DELETE</button>
+          </div>
 
         </div>
-    </div>
-    
-    <div id="todo" class="tabcontent">
-      <h3>random</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, vero? Numquam possimus hic, iste cumque animi labore fuga doloremque eius officia nobis aspernatur odio libero quasi voluptatum nisi illum corporis in nemo asperiores corrupti veritatis, facere maxime! Sed, vel modi?</p> 
-    </div>
-    
-    <div id="completed" class="tabcontent">
-      <h3>random</h3>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni harum accusantium molestias recusandae laboriosam numquam maiores ratione sed impedit, molestiae amet iste, natus quisquam neque velit illum. Totam facilis mollitia rerum, odit accusantium adipisci est perferendis, dolore dolores eveniet illum!</p>
-    </div>
-</div> 
+
+      </div>
+
+    </section>
+  </main>
+
+
     <script src="index.js"></script>
 </body>
 </html>
+
+
