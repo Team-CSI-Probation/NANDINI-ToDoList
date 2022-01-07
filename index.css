@@ -91,9 +91,9 @@ main{
   color: rgb(202, 192, 192);
   margin-bottom: 1rem;
 }
-#tasks{
+/* #tasks{
   margin-left:-3rem;
-}
+} */
 
 .task-list{
   margin-top: -3rem;
